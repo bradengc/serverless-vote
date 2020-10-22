@@ -6,11 +6,11 @@ exports.handler = async (event) => {
   if (v === "a") {
     votesArray[0] += 1;
   } else if (v === "b") {
-    votesArray[0] += 1;
+    votesArray[1] += 1;
   } else if (v === "c") {
-    votesArray[0] += 1;
+    votesArray[2] += 1;
   } else if (v === "d") {
-    votesArray[0] += 1;
+    votesArray[3] += 1;
   } else if (v === "r") {
     votesArray = [0, 0, 0, 0];
   }
@@ -18,7 +18,7 @@ exports.handler = async (event) => {
 
   return {
     statusCode: 200,
-    header: { "Access-Control-Allow-Origin": '"' },
+    headers: { "Access-Control-Allow-Origin": "*" },
     body: `Hello ${subject}!`,
   };
 };
