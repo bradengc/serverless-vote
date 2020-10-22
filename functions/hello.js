@@ -1,7 +1,7 @@
 let votesArray = [0, 0, 0, 0];
 
 exports.handler = async (event) => {
-  const v = event.queryStringParameters.name;
+  const v = event.queryStringParameters.vote;
 
   if (v === "a") {
     votesArray[0] += 1;
